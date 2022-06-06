@@ -1,0 +1,86 @@
+.card {
+    @include flex(column, center);
+    max-width: 800px;
+    margin: 1rem;
+    background-color: #fff;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    @media (min-width: 62em) {
+        @include flex(row, center);
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+    }
+    header {
+        width: 100%;
+        height: 100%;
+        .card-img {
+            background-image: url(../images/drawers.jpg);
+            background-position: top;
+            background-size: cover;
+            height: 12.5rem;
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
+            @media (min-width: 62em) {
+                border-top-left-radius: 1rem;
+                border-bottom-left-radius: 1rem;
+                height: 19rem;
+            }
+        }
+    }
+    main {
+        @media (min-width: 62em) {
+            margin: 0 1rem;
+        }
+        .text-section {
+            margin: 1.5rem;
+            .card-title {
+                color: $colorVeryDarkGrayishBlue;
+                margin-bottom: 1rem;
+                font-size: 1.1rem;
+                line-height: 1.5rem;
+                letter-spacing: 0.012rem;
+                @media (min-width: 62em) {
+                    font-size: 1.4rem;
+                    line-height: 2rem;
+                }
+            }
+            .card-subtxt {
+                font-size: 0.9rem;
+                letter-spacing: 0.007rem;
+                text-align: left;
+                line-height: 1.55rem;
+                font-weight: 500;
+                color: $colorGrayishBlue;
+            }
+        }
+        .profile {
+            margin: 1.5rem;
+            @include flex(row, space-between);
+            .profile-details {
+                @include flex(row, flex-start);
+                gap: 0.5rem;
+                img {
+                    width: 2.5rem;
+                    border-radius: 50%;
+                }
+                .profile-info {
+                    .profile-name {
+                        font-size: 0.9rem;
+                        font-weight: bold;
+                        color: $colorVeryDarkGrayishBlue;
+                        margin-bottom: 0.1rem;
+                    }
+                    .profile-date {
+                        font-size: 0.8rem;
+                        color: $colorDesaturatedDarkBlue;
+                    }
+                }
+            }
+            .share {
+                background-color: $colorLightGrayishBlue;
+                padding: 0.4rem 0.6rem;
+                border-radius: 50%;
+            }
+        }
+    }
+}
